@@ -5,7 +5,7 @@ Created on 2019/06/22
 @author: Robin
 '''
 
-__version__ = '0.0.2'
+__version__ = '0.0.4'
 
 
 class UniTable(object):
@@ -732,4 +732,4 @@ class CSVRender(TableRender):
         out.write(content.encode('utf-8'))
 
 
-OneTable = UniTable  # the old name is unitable, but pypi registered.
+OneTable = UniTable  # the old name is unitable, but pypi was registered.

@@ -1,6 +1,6 @@
-PMongo
+onetable
 ===============
-A small Python MongoDB Document-Based access engine.
+Once defined, multiple ways to export table.
 
 Install
 ===============
