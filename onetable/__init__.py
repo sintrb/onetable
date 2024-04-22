@@ -505,6 +505,7 @@ class XlsxRender(TableRender):
             'lime': 'FF63C544',
             'light_orange': 'FFF49638',
             'coral': 'FFFB4D50',
+            'lightpink': 'FFB6C1',
         }
 
         def transcolor(c):
@@ -526,10 +527,13 @@ class XlsxRender(TableRender):
                                   wrap_text=True,
                                   shrink_to_fit=True,
                                   indent=0)
+            fill = PatternFill(patternType='solid',
+                                     fgColor=transcolor(style.get('background', 'white')))
             styled = {
                 'border': border,
                 'font': font,
-                'alignment': alignment
+                'alignment': alignment,
+                'fill': fill,
             }
             stylemap[name] = styled
 
@@ -537,6 +541,7 @@ class XlsxRender(TableRender):
             cs.border = styled.get('border')
             cs.font = styled.get('font')
             cs.alignment = styled.get('alignment')
+            cs.fill = styled.get('fill')
 
         for r in range(tab.maxRow + 1):
             for c in range(tab.maxCol + 1):
