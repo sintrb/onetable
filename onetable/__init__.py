@@ -528,7 +528,7 @@ class XlsxRender(TableRender):
                                   shrink_to_fit=True,
                                   indent=0)
             fill = PatternFill(patternType='solid',
-                                     fgColor=transcolor(style.get('background', 'white')))
+                               fgColor=transcolor(style.get('background', 'white')))
             styled = {
                 'border': border,
                 'font': font,
