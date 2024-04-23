@@ -4,18 +4,18 @@ if __name__ == '__main__':
     import os, time, subprocess
     from onetable import DefualtTable, gen_dataitemstable, HtmlRender, XlsRender, XlsxRender, PdfRender, CSVRender
 
-    table = DefualtTable({'fontSize': 10, 'color': 'red'})
+    table = DefualtTable({'fontSize': 10, 'color': 'red', 'background': 'light_orange'})
     cols = list(filter(lambda x: x, [
         {"field": "a", "title": u"团号"},
-        {"field": "b", "title": u"酒店"},
+        {"field": "b", "title": u"酒店",},
     ]))
     items = [{'a': 'x', 'b': 'y'}, {'a': 'z', 'b': 't'}]
-    table = gen_dataitemstable(items=items, table=DefualtTable(), columns=cols)
+    table = gen_dataitemstable(items=items, table=table, columns=cols)
 
     renders = [
-        (HtmlRender, 'html'),
+        # (HtmlRender, 'html'),
         # (XlsRender, 'xls'),
-        # (XlsxRender, 'xlsx'),
+        (XlsxRender, 'xlsx'),
         # (PdfRender, 'pdf'),
         # (CSVRender, 'csv'),
     ]

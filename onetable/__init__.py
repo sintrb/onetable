@@ -5,7 +5,7 @@ Created on 2019/06/22
 @author: Robin
 '''
 
-__version__ = '0.0.4'
+__version__ = '0.0.5'
 
 
 class UniTable(object):
